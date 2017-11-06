@@ -29,9 +29,9 @@ public class Practice01SquareImageView extends ImageView {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         // 先用 getMeasuredWidth() 和 getMeasuredHeight() 取到 super.onMeasure() 的计算结果
-
+        int length = Math.min(getMeasuredWidth(), getMeasuredHeight());
         // 然后通过计算，让宽度和高度一致
-
+        setMeasuredDimension(length, length);
         // 再用 setMeasuredDimension(width, height) 来保存最终的宽度和高度
     }
 }
